@@ -1,0 +1,99 @@
+/* Container to center elements */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Box styles */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Define individual animations */
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: red;
+        transform: translateX(500px);
+    }
+    100% {
+        background-color: blue;
+        transform: translateX(500px);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: translateX(500px) scale(1);
+    }
+    100% {
+        transform: translateX(500px) scale(1.5);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateX(500px) scale(1.5) rotate(0deg);
+    }
+    100% {
+        transform: translateX(500px) scale(1.5) rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: translateX(500px) scale(1.5) rotate(360deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(500px) scale(1.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Classes to trigger animations */
+.animate-moveRight {
+    animation: moveRight 1s forwards;
+}
+
+.animate-changeColor {
+    animation: changeColor 1s forwards;
+}
+
+.animate-scaleUp {
+    animation: scaleUp 1s forwards;
+}
+
+.animate-rotate {
+    animation: rotate 1s forwards;
+}
+
+.animate-fadeOut {
+    animation: fadeOut 1s forwards;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
